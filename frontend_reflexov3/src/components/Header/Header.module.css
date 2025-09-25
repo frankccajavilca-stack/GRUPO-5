@@ -1,0 +1,124 @@
+.header {
+  position: relative;
+
+  height: 100%;
+  padding: 5px 15px;
+
+  line-height: 40px;
+
+  background-color: var(--color-background-primary);
+  transition: all var(--transition-normal);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.headerLeft {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.backButton {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--spacing-sm);
+  border: none;
+  border-radius: var(--radius-md);
+
+  color: var(--color-text-primary);
+  background: var(--color-background-secondary);
+  transition: all var(--transition-fast);
+}
+
+.backButton:hover {
+  background-color: var(--color-background-tertiary);
+  transform: translateX(-2px);
+}
+
+.headerTitle {
+  margin-left: var(--spacing-sm);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  font-family: var(--font-family);
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  line-height: 1;
+}
+
+.themeToggleContainer {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-background-secondary);
+  border: 1px solid var(--color-border-primary);
+  transition: all var(--transition-normal);
+}
+
+.themeToggleContainer:hover {
+  background-color: var(--color-background-tertiary);
+  box-shadow: var(--shadow-soft);
+}
+
+.timeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1;
+}
+
+.headerTime {
+  margin-bottom: 2px;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-secondary);
+  font-family: var(--font-family);
+}
+
+.headerDate {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  text-transform: capitalize;
+  opacity: 0.9;
+  font-family: var(--font-family);
+}
+
+.separator {
+  background-color: var(--color-border-primary);
+  transition: background-color var(--transition-normal);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .headerRight {
+    gap: var(--spacing-md);
+  }
+  
+  .timeContainer {
+    display: none;
+  }
+  
+  .headerTitle {
+    font-size: var(--font-size-md);
+  }
+  
+  .themeToggleContainer {
+    padding: var(--spacing-xs);
+  }
+}

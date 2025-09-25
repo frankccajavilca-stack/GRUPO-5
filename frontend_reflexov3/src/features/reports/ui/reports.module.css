@@ -1,0 +1,296 @@
+/* Tarjeta principal de selección */
+.card {
+  width: 100%;
+  max-width: 100%; 
+  padding: 16px;
+  border: 1px solid var(--color-border-primary) !important;
+  border-radius: var(--radius-xxl) !important;
+
+  text-align: center;
+
+  background-color: var(--color-background-primary) !important;
+  color: var(--color-text-primary) !important;
+
+  transition: all var(--transition-normal);
+}
+
+.title {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border-primary);
+
+  font-size: 22px; 
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family);
+  color: var(--color-text-primary);
+  text-align: center;
+  transition: color var(--transition-normal);
+}
+
+/* Contenedor de las tarjetas de selección */
+.selectorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* Tarjeta de selección de reporte */
+.reportCard {
+  cursor: pointer;
+
+  border: 1px solid var(--color-border-primary) !important;
+  border-radius: var(--radius-lg) !important;
+
+  text-align: left;
+
+  background-color: var(--color-background-secondary) !important;
+  color: var(--color-text-primary) !important;
+
+  transition: all var(--transition-normal);
+}
+
+.reportCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary) !important;
+  box-shadow: var(--shadow-medium);
+}
+
+.selectedCard {
+  border-color: var(--color-primary) !important;
+  background-color: var(--color-primary-light) !important;
+  box-shadow: var(--shadow-glow);
+}
+
+.cardContent {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.cardIcon {
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family);
+  color: var(--color-text-primary);
+  transition: color var(--transition-normal);
+}
+
+.cardDescription {
+  margin: 0;
+  font-size: 13px;
+  font-family: var(--font-family);
+  color: var(--color-text-secondary);
+  transition: color var(--transition-normal);
+}
+
+.controlsWrapper {
+  display: flex;
+  flex-direction: column; 
+  gap: 16px;
+  align-items: stretch;
+
+  width: 100%;
+  margin: 24px auto 0; 
+  padding: 16px;
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-lg);
+
+  background-color: var(--color-background-secondary);
+  transition: all var(--transition-normal);
+}
+
+.datePickerContainer {
+  flex-grow: 1;
+}
+
+.generateBtn {
+  height: 48px !important;
+  border: none !important;
+
+  font-size: 16px !important;
+  font-weight: var(--font-weight-semibold) !important;
+  font-family: var(--font-family) !important;
+
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover)) !important;
+  transition: all var(--transition-normal) !important;
+}
+
+.generateBtn:hover {
+  background: linear-gradient(90deg, var(--color-primary-hover), var(--color-primary-active)) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-glow) !important;
+}
+
+/* Media Query para pantallas más grandes (escritorio) */
+@media (min-width: 768px) {
+  .card {
+    max-width: 700px;
+  }
+
+  .controlsWrapper {
+    flex-direction: row;
+    align-items: center;
+    max-width: 95%;
+  }
+  
+  .generateBtn {
+    flex-shrink: 0; 
+    height: 40px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Estilos para la previsualización  */
+.previewContainer {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 85%;
+  height:90%;
+  padding: 32px;
+  border-radius: var(--radius-xxl);
+
+  background-color: var(--color-background-secondary);
+  border: 1px solid var(--color-border-primary);
+  transition: all var(--transition-normal);
+}
+
+.topActions {
+  pointer-events: none;
+
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 18px;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-md);
+
+  font-size: 24px;
+  color: var(--color-text-primary);
+
+  background-color: var(--color-background-tertiary);
+  transition: all var(--transition-normal);
+}
+
+.actionBtn:hover {
+  background-color: var(--color-background-quaternary);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.downloadButtons button {
+  border-color: var(--color-primary);
+  color: white;
+  background-color: var(--color-primary);
+  transition: all var(--transition-normal);
+}
+
+.downloadButtons button:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.previewContent {
+  overflow-y: auto;
+  flex: 1;
+  padding-top: 45px;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.errorMsg, .noDataMsg {
+  padding: 40px;
+  color: var(--color-text-primary);
+  text-align: center;
+  font-family: var(--font-family);
+  transition: color var(--transition-normal);
+}
+
+/* Estilos para el modal de edición */
+.editModal {
+  :global(.ant-modal-content) {
+    border-radius: 12px;
+    background-color: #1f1f1f;
+  }
+
+  :global(.ant-modal-header) {
+    border-bottom: 1px solid #333;
+    border-radius: 12px 12px 0 0;
+    background-color: #1f1f1f;
+  }
+
+  :global(.ant-modal-title) {
+    color: #fff;
+  }
+
+  :global(.ant-modal-body) {
+    color: #fff;
+    background-color: #1f1f1f;
+  }
+
+  :global(.ant-form-item-label > label) {
+    color: #fff;
+  }
+
+  :global(.ant-input-number) {
+    border-color: #444;
+    color: #fff;
+    background-color: #333;
+  }
+
+  :global(.ant-input-number:hover) {
+    border-color: #4CAF50;
+  }
+
+  :global(.ant-input-number:focus) {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+  }
+
+  :global(.ant-divider) {
+    border-color: #333;
+  }
+
+  :global(.ant-divider-inner-text) {
+    color: #fff;
+  }
+
+  :global(.ant-typography) {
+    color: #fff;
+  }
+
+  :global(.ant-typography h5) {
+    color: #4CAF50;
+  }
+}
