@@ -282,7 +282,7 @@ LOGGING = {
 
 
 # Token de integración privada de GHL
-GHL_PRIVATE_TOKEN = "pit-19456a64-cae3-4ae7-9ce6-f0ba56fc78e8"
+GHL_PRIVATE_TOKEN = "pit-acf725f4-354f-4d07-a7e3-c53818cc776e"
 GHL_BASE_URL = config("GHL_BASE_URL", default="https://services.leadconnectorhq.com")
 GHL_LOCATION_ID = config("GHL_LOCATION_ID", default=None)
 GHL_CALENDAR_ID = config("GHL_CALENDAR_ID", default=None)
